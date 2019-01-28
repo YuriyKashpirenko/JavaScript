@@ -1,10 +1,29 @@
 'use strict'
-function calculate (){
-  //console.log('I am here');
-  let salaryStr = document.getElementById('salary').value;
-  let salary = Number(salaryStr);
-  console.log(calcTax(salary));
-}
+    function calculate (){
+      //console.log('I am here');
+      let salaryStr = document.getElementById('salary').value;
+        //show error if not a number
+        if(isNaN(salaryStr)){
+            console.log('Error: not a number. Please try again');
+        }
+        else {
+            let salary = Number(salaryStr);
+            //number with two decimal places
+            let taxNum = calcTax(salary).toFixed(2);
+            
+            //print tax and use query selector
+        //document.querySelector('#tax').innerHTML = ("tax: " + taxNum);
+            console.log('tax: ', document.querySelector('#tax').innerHTML = taxNum);
+            
+            //print net and use query selector 
+            let netNum = (salary - taxNum).toFixed(2);
+        //document.querySelector('#net').innerHTML = ("net: " + netNum);
+            console.log('net: ', document.querySelector('#net').innerHTML = netNum);
+        }
+
+    }
+
+
 
 function calcTax (deductNum){
     if (deductNum > 42705 && deductNum <= 85405){
