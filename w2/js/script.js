@@ -23,8 +23,12 @@
 
     }
 
+//add event listener
+//click anywere in the field runs calculate function
+var el = document.getElementById("salary");
+el.addEventListener("click", calculate, false);
 
-
+//function to calculate tax
 function calcTax (deductNum){
     if (deductNum > 42705 && deductNum <= 85405){
         return (20 / 100) * (deductNum  - 42705);
