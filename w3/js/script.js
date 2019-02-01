@@ -1,7 +1,8 @@
 'use strict'
 
-//ver1
+
 function submitForm(){
+  document.querySelector('.hide').className = '.Show';
 //console.log('text');
 //let text = document.getElementById('myClass').value;
 //let text = document.getElementById('.myClass').value;
@@ -11,7 +12,7 @@ let spaceFree = text.split(' ').join('');
 alert(isPalindromic(spaceFree));
 }
 
-//let text = document.getElementById('text').value;
+//ver1
 function isPalindromic(userInput){
   let userInputArray = userInput.toLowerCase().split('');
   userInputArray.reverse();
@@ -24,6 +25,33 @@ function isPalindromic(userInput){
 }
 
 console.log(isPalindromic('mom'));
+
+
+//get number between 15 and 20
+let min = 15;
+let max = 20;
+function generateRandom (min, max){
+let num = Math.round((Math.random() * (max - min)) + min);
+console.log(num);
+}
+
+generateRandom (min, max);
+
+
+function generateRandom2 (min, max){
+  console.log(getRandomInt(min));
+  console.log(getRandomInt(max));
+}
+
+function  getRandomInt(max){
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+function  getRandomInt(min){
+  return Math.floor(Math.random() * Math.floor(min));
+}
+
+generateRandom2(15, 20);
 
 
 
