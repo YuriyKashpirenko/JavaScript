@@ -2,11 +2,11 @@
 
 //ver1
 function isPalindromic(userInput){
-  let userInputArray = userInput.split('');
+  let userInputArray = userInput.toLowerCase().split('');
   userInputArray.reverse();
   let reverseInput = userInputArray.join('');
 
-  return (userInputArray === reverseInput);
+  return (userInput.toLowerCase() === reverseInput);
   // if (userInputArray === reverseInput){return true;}
   // else {return false;}
 
