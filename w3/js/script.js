@@ -1,6 +1,17 @@
 'use strict'
 
 //ver1
+function submitForm(){
+//console.log('text');
+//let text = document.getElementById('myClass').value;
+//let text = document.getElementById('.myClass').value;
+//or
+let text = document.querySelector('input').value;
+let spaceFree = text.split(' ').join('');
+alert(isPalindromic(spaceFree));
+}
+
+//let text = document.getElementById('text').value;
 function isPalindromic(userInput){
   let userInputArray = userInput.toLowerCase().split('');
   userInputArray.reverse();
@@ -13,6 +24,7 @@ function isPalindromic(userInput){
 }
 
 console.log(isPalindromic('mom'));
+
 
 
 //ver3
