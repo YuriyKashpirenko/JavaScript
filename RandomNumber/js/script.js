@@ -1,5 +1,8 @@
 'use strict'
 
+console.log('Random Number');
+console.log('=============');
+
 //generate number between 15 and 20
 function generateRandom1 (min, max){
     let num = Math.round((Math.random() * (max - min)) + min);
