@@ -1,17 +1,21 @@
 'use strict'
 
 //generate number between 15 and 20
-function generateRandom (min, max){
+function generateRandom1 (min, max){
     let num = Math.round((Math.random() * (max - min)) + min);
     //return Math.round((Math.random() * (max - min)) + min);
     console.log(num);
 }
 
 console.log('random number between 15 and 20');
-let random = generateRandom(15, 20);
+let random = generateRandom1 (15, 20);
 
 
 console.log('');
+
+
+let defMin = 0;
+let defMax = 1000;
 
 function generateRandom (num1, num2) {
     //cehck argument length
@@ -22,21 +26,16 @@ function generateRandom (num1, num2) {
     let min = parseInt(num1);
     let max = parseInt(num2);
     
-    //if arment length is greator then 0 then calculate random number
-    if (argLengh > 0){
-        
+    //if argument length is 0 then use default min and max
+    if (argLengh == 0){generateRandom (defMin, defMax);}
+    else {
         let generateRandom2 = (min, max) =>{
             let num = Math.round((Math.random() * (max - min)) + min);
             console.log(num);
         }
 
         generateRandom2(min,max);
-
-    }
-    
-    //if argument length is 0 then return 0
-    else {console.log(0);}
-    
+    }    
 }
 
 console.log('random number between 0 and 1000');
@@ -45,8 +44,9 @@ generateRandom (0,1000);
 console.log('random number if one parameter not defined');
 generateRandom (100);
 
-console.log('number if parameter not defined');
+console.log('random number if parameters not defined (default values)');
 generateRandom();
+
 
 
 
