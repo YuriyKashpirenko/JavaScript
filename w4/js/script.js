@@ -54,7 +54,7 @@ function slice(){
 
 function showArayCopy(input){
   document.querySelector('#myListCopy').innerHTML = '[' +
-  myArray.join(',') + ']'
+  secArr.join(',') + ']'
   ;
 }
 
