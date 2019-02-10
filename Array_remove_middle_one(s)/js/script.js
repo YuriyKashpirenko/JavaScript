@@ -19,6 +19,14 @@ function  push() {
   }
 }
 
+function showArray(){
+  //add fancyList
+  showFancyList();
+
+  document.querySelector('#myList').innerHTML = 
+  '[' + myArray.join(',') + ']';
+}
+
 //remove the last element from an array
 function  pop() {
   myArray.pop();
@@ -44,14 +52,6 @@ function  reverse() {
   showArray();
 }
 
-function showArray(){
-  //add fancyList
-  showFancyList();
-
-  document.querySelector('#myList').innerHTML = 
-  '[' + myArray.join(',') + ']';
-}
-
 // return a shallow copy of a portion of a typed array
 function slice(){
   let secArr = myArray.slice(1,myArray.length-1);
@@ -75,7 +75,6 @@ function compareNumbers(a, b){
   if(b < a){return 1;}
   return 0;
 }
-//showArray();
 
 //compare numbers descending
 function compareNumbersDesc(a, b){
@@ -93,9 +92,6 @@ function showFancyList(){
 
   document.querySelector('#myFancyList').innerHTML = str;
 }
-
-showFancyList();
-
 
 //remove middle number(s) from an array
 function removeMid(){
