@@ -3,8 +3,15 @@
   <head></head>
   <body>
    <text>Salary &nbsp;</text>
-    <input id='salary'/>
-    <button onclick="calculate();" id = "button">calculate</button>
+<!--//clear the input and error on new input//-->
+    <input id='salary' onfocus="this.value=''" onclick="clearInput();"/>
+    <button onclick="calculate();" >calculate</button>
+    
+<!--//or clear input and the error on new input with the button-->
+    <button onclick="
+    document.getElementById('salary').value = ''; 
+    clearInput();
+    ">clear input</button>
 
     <div id = 'error'></div>
     
