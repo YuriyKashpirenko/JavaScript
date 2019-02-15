@@ -8,7 +8,7 @@ function  push() {
   let value = document.querySelector('#myId').value;
   if (isNaN(value)){
       console.log('Error. Please enter number');
-      document.querySelector('#error').innerHTML = 
+      document.querySelector('#error').innerHTML =
       'Error. Please enter number';
   }
   else {
@@ -48,7 +48,7 @@ function showArray(){
   //add fancyList
   showFancyList();
 
-  document.querySelector('#myList').innerHTML = 
+  document.querySelector('#myList').innerHTML =
   '[' + myArray.join(',') + ']';
 }
 
@@ -59,7 +59,7 @@ function slice(){
 }
 
 function showArrayCopy(input){
-  document.querySelector('#myListCopy').innerHTML = 
+  document.querySelector('#myListCopy').innerHTML =
   '[' + input.join(',') + ']';
 }
 
@@ -119,7 +119,19 @@ function removeMid(){
 }
 
 function showRemoveMid(arrCopy){
-    document.querySelector('#removeMid').innerHTML = 
+    document.querySelector('#removeMid').innerHTML =
     '[' + arrCopy.join(',') + ']';
 }
 
+
+
+function showFancyArray2(){
+  let text = '';
+//declare anonimus function in parameter
+  myArray.forEach(function(item){
+    text += '<li>' + myArray[i] + '</li>\n';
+    console.log(item);
+  });
+  document.querySelector('#myFancyList').innerHTML = text;
+
+}
