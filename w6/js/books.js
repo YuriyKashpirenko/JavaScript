@@ -1,10 +1,4 @@
 'use strict'
-
-//test
-//var array1 = [2, 3, 1];
-//console.log(Math.min(...array1));
-//console.log();
-
 let books =
     [{
         "volumeInfo": {
@@ -156,78 +150,3 @@ let books =
             "title": "Harry Potter Power"
         }
     }];
-
-
-
-    function printTitles() {
-        for(let i = 0; i < books.length; i++){
-            console.log(books[i].volumeInfo.title);
-        }
-    }
-
-console.log("Print titles:");
-//printTitles();
-console.log();
-
-    function printAuthors() {
-        for(let i = 0; books.length; i++){
-            console.log(books[i].volumeInfo.authors);
-        }
-    }
-
-console.log("Print Authors:");
-//printAuthors();
-console.log();
-
-
-    function findShortest() {
-        let book = '';
-        let num = books[0].volumeInfo.pageCount;
-        let min = 0;
-
-        //find min number of pages
-        for (let i = 0; i < books.length; i++){
-            //118 < 438
-            if (books[i].volumeInfo.pageCount < num){
-                num = books[i].volumeInfo.pageCount;
-                if (num >= min){min = num;}
-            }
-        }
-
-        //find book title
-        for(let j = 0; j < books.length; j++){
-            if (books[j].volumeInfo.pageCount == min){
-                book = books[j].volumeInfo.title;
-            }
-        }
-        return book;
-    }
-
-console.log();
-//let bookName = findShortest();
-console.log("Find shortest: " + findShortest());
-
-
-    function aboveThree() {
-      let result = [];
-        // push the title of the books where rating >= 3
-        for(let i = 0; i < books.length; i++){
-            if (books[i].volumeInfo.averageRating >= 3){
-                result.push(books[i].volumeInfo.title);
-            }
-        }
-      return result;
-    }
-
-let abThree = aboveThree();
-console.log(abThree);
-
-
-    function findAuthors () {
-      let result = {};
-      /* {
-        "Females and Harry Potter" : ["Ruthann Mayes-Elma"],
-        "Harry Potter and International Relations":  ["Daniel H. Nexon", "Iver B. Neumann"],
-      }*/
-      return result;
-    }
