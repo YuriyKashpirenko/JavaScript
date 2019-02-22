@@ -67,7 +67,7 @@ let books =
                 "thumbnail": "http://books.google.com/books/content?id=LiWrXUHgnL8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
             },
             "language": "en",
-            "pageCount": 155,
+            "pageCount": 22,
             "publishedDate": "2006-01-01",
             "publisher": "Rowman & Littlefield",
             "subtitle": "Not All that Empowering",

@@ -1,9 +1,9 @@
 'use strict'
 
-//test
-//var array1 = [2, 3, 1];
-//console.log(Math.min(...array1));
-//console.log();
+test
+var array1 = [2, 3, 1];
+console.log(Math.min(...array1));
+console.log();
 
 let books =
     [{

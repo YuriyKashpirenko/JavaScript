@@ -52,7 +52,7 @@ function printAuthors2() {
 function findShortest() {
   let book = '';
   let num = books[0].volumeInfo.pageCount;
-  let min = 0;
+  let min;
 
   //find min number of pages
   for (let i = 0; i < books.length; i++){
@@ -96,3 +96,21 @@ function findAuthors () {
   }*/
   return result;
 }
+
+
+console.log(_.minBy(books, 'pageCount'));
+
+//https://lodash.com/docs/
+
+Example
+
+var objects = [{ 'n': 1 }, { 'n': 2 }];
+
+_.minBy(objects, function(o) { return o.n; });
+// => { 'n': 1 }
+
+// The `_.property` iteratee shorthand.
+_.minBy(objects, 'n');
+// => { 'n': 1 }
+
+_.multiply(multiplier, multiplicand)
