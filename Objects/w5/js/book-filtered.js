@@ -1,6 +1,6 @@
 'use strict'
 
-test
+//test
 var array1 = [2, 3, 1];
 console.log(Math.min(...array1));
 console.log();
@@ -150,7 +150,7 @@ let books =
                 "thumbnail": "http://books.google.com/books/content?id=WV8pZj_oNBwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
             },
             "language": "en",
-            "pageCount": 268,
+            "pageCount": 22, //268,
             "publishedDate": "2010",
             "publisher": "Interactive Publications",
             "title": "Harry Potter Power"
@@ -170,7 +170,7 @@ console.log("Print titles:");
 console.log();
 
     function printAuthors() {
-        for(let i = 0; books.length; i++){
+        for(let i = 0; i < books.length; i++){
             console.log(books[i].volumeInfo.authors);
         }
     }
@@ -181,26 +181,50 @@ console.log();
 
 
     function findShortest() {
-        let book = '';
-        let num = books[0].volumeInfo.pageCount;
-        let min = 0;
-
-        //find min number of pages
-        for (let i = 0; i < books.length; i++){
-            //118 < 438
-            if (books[i].volumeInfo.pageCount < num){
-                num = books[i].volumeInfo.pageCount;
-                if (num >= min){min = num;}
+//        let book = '';
+//        let num = books[0].volumeInfo.pageCount;
+//        let min = 0;
+//
+//        //find min number of pages
+//        for (let i = 0; i < books.length; i++){
+//            //118 < 438
+//            if (books[i].volumeInfo.pageCount < num){
+//                num = books[i].volumeInfo.pageCount;
+//                if (num >= min){min = num;}
+//            }
+//        }
+//
+//        //find book title
+//        for(let j = 0; j < books.length; j++){
+//            if (books[j].volumeInfo.pageCount == min){
+//                book = books[j].volumeInfo.title;
+//            }
+//        }
+//        return book;
+        
+        let title = '';
+        let arrayNum = [];
+        
+        //create array
+        books.forEach(function(book){
+            if(book.volumeInfo.pageCount){
+                arrayNum.push(book.volumeInfo.pageCount);
             }
-        }
-
-        //find book title
-        for(let j = 0; j < books.length; j++){
-            if (books[j].volumeInfo.pageCount == min){
-                book = books[j].volumeInfo.title;
+        });
+        
+        //find min number
+        let min = Math.min(...arrayNum);
+        //console.log(min);
+        
+        //find book with min number 
+        books.forEach(function(book){
+            if(book.volumeInfo.pageCount == min){
+                title = book.volumeInfo.title;
             }
-        }
-        return book;
+        });
+        
+        return title;
+        
     }
 
 console.log();
@@ -220,7 +244,10 @@ console.log("Find shortest: " + findShortest());
     }
 
 let abThree = aboveThree();
-console.log(abThree);
+console.log('Find good books: '); 
+            abThree.forEach(function(title){
+                console.log(title + '\n');
+});
 
 
     function findAuthors () {

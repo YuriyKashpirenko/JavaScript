@@ -50,26 +50,28 @@ function printAuthors2() {
 
 
 function findShortest() {
-  let book = '';
-  let num = books[0].volumeInfo.pageCount;
-  let min;
-
-  //find min number of pages
-  for (let i = 0; i < books.length; i++){
-      //118 < 438
-      if (books[i].volumeInfo.pageCount < num){
-          num = books[i].volumeInfo.pageCount;
-          if (num >= min){min = num;}
-      }
-  }
-
-  //find book title
-  for(let j = 0; j < books.length; j++){
-      if (books[j].volumeInfo.pageCount == min){
-          book = books[j].volumeInfo.title;
-      }
-  }
-  return book;
+        let title = '';
+        let arrayNum = [];
+        
+        //create array
+        books.forEach(function(book){
+            if(book.volumeInfo.pageCount){
+                arrayNum.push(book.volumeInfo.pageCount);
+            }
+        });
+        
+        //find min number
+        let min = Math.min(...arrayNum);
+        //console.log(min);
+        
+        //find book with min number 
+        books.forEach(function(book){
+            if(book.volumeInfo.pageCount == min){
+                title = book.volumeInfo.title;
+            }
+        });
+        
+        return title;
 }
 
 console.log("Find shortest: " + findShortest());
@@ -86,7 +88,13 @@ function aboveThree() {
   return result;
 }
 
- console.log(aboveThree());
+//console.log(aboveThree());
+let abThree = aboveThree();
+console.log('Find good books: '); 
+            abThree.forEach(function(title){
+                console.log(title + '\n');
+});
+
 
 function findAuthors () {
   let result = {};
@@ -98,19 +106,19 @@ function findAuthors () {
 }
 
 
-console.log(_.minBy(books, 'pageCount'));
+//console.log(_.minBy(books, 'pageCount'));
 
 //https://lodash.com/docs/
 
-Example
+//Example
 
-var objects = [{ 'n': 1 }, { 'n': 2 }];
-
-_.minBy(objects, function(o) { return o.n; });
-// => { 'n': 1 }
-
-// The `_.property` iteratee shorthand.
-_.minBy(objects, 'n');
-// => { 'n': 1 }
-
-_.multiply(multiplier, multiplicand)
+//var objects = [{ 'n': 1 }, { 'n': 2 }];
+//
+//_.minBy(objects, function(o) { return o.n; });
+//// => { 'n': 1 }
+//
+//// The `_.property` iteratee shorthand.
+//_.minBy(objects, 'n');
+//// => { 'n': 1 }
+//
+//_.multiply(multiplier, multiplicand)
