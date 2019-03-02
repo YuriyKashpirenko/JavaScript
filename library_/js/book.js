@@ -5,11 +5,14 @@ function Book(authors, title, pageCount, averageRating){
   this.pageCount = pageCount;
   this.averageRating = averageRating;
 
+//method isPopular returns true, if the average rating is above 3
   this.isPopular = () => {
-    return this.averageRating >= 3;
+      if(this.averageRating >= 3){return true;}
+      return false;
   }
   
+  //method numberOfAuthors returns the number of authors
   this.numberOfAutors = () => {
-      
+      return this.authors.length;
   }
 }

@@ -12,8 +12,7 @@ function Library (books){
   //method printAuthors prints the “authors” of the books
   this.printAuthors = function(){
     this.books.forEach(function(book){
-    // if(book.volumeInfo.authors !== undefined){
-    //or
+    //check if book has an author
     if(book.authors){
       console.log(book.authors.join('\n'));
         }

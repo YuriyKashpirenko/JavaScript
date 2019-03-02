@@ -13,9 +13,14 @@ books.forEach(function(item) {
 
 let concordiaLibrary = new Library(myBooks);
 
+//book
+console.log(myBooks[2].title);
+console.log(myBooks[2].isPopular());
+console.log(myBooks[2].numberOfAutors());
+
+//library
 console.log('Print Titles: ');
 concordiaLibrary.printTitles();
-//console.log(myBooks[2].title);
 
 console.log('Print Authors: ');
 concordiaLibrary.printAuthors();
