@@ -14,9 +14,20 @@ books.forEach(function(item) {
 let concordiaLibrary = new Library(myBooks);
 
 //book
-console.log(myBooks[2].title);
-console.log(myBooks[2].isPopular());
-console.log(myBooks[2].numberOfAutors());
+//console.log(myBooks[2].title);
+//console.log(myBooks[2].isPopular());
+//console.log(myBooks[2].numberOfAutors());
+//console.log(myBooks[2].getShortTitle());
+
+//for each book
+myBooks.forEach(function(book){
+    if(book.authors){
+        console.log('Title: ' + book.title);
+        console.log('Is popular: ' + book.isPopular());
+        console.log('Number of authors: ' + book.numberOfAutors());
+        console.log('Short title: ' + book.getShortTitle());
+    }
+});
 
 //library
 console.log('Print Titles: ');
