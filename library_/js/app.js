@@ -22,10 +22,12 @@ let concordiaLibrary = new Library(myBooks);
 //for each book
 myBooks.forEach(function(book){
     if(book.authors){
-        console.log('Title: ' + book.title);
-        console.log('Is popular: ' + book.isPopular());
-        console.log('Number of authors: ' + book.numberOfAutors());
-        console.log('Short title: ' + book.getShortTitle());
+        console.log(
+            'Title: ' + book.title +
+            '\n Is popular: ' + book.isPopular() +
+            '\n Number of authors: ' + book.numberOfAutors() +
+            '\n Short title: ' + book.getShortTitle()
+                   );
     }
 });
 
