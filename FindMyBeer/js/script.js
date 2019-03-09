@@ -18,7 +18,12 @@ function findBeer(){
       result = JSON.parse(this.responseText);
 
       result.forEach(function(brewery){
-        document.querySelector('#myList').innerHTML = brewery.city;
+        document.querySelector('#br_name').innerHTML = 'Name: ' + brewery.name;
+        document.querySelector('#website').innerHTML = 'Website: ' + brewery.website_url;
+        document.querySelector('#street').innerHTML = 'Street: ' + brewery.street;
+        document.querySelector('#in_city').innerHTML = 'City: ' + brewery.city;
+        document.querySelector('#state').innerHTML = 'State: ' + brewery.state;
+        document.querySelector('#postCode').innerHTML = 'Postal code: ' + brewery.postal_code;
       });
 
     }
@@ -31,5 +36,9 @@ function findBeer(){
 
 }
 
-//  document.querySelector('#error').innerHTML =
-//  'Error.';
+//    <div id = 'br_name'></div>
+//    <div id = 'website'></div>
+//    <div id = 'street'></div>
+//    <div id = 'in_city'></div>
+//    <div id = 'state'></div>  
+//    <div id = 'postCode'></div>  
