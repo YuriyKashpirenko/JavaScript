@@ -16,15 +16,49 @@ function findBeer(){
       console.log(JSON.parse(this.responseText));
 
       result = JSON.parse(this.responseText);
-
+        
+//      let bar_obj = {};
+      //let barName = '';
+        let barName = [];
+//      let barWebsite = '';
+//      let barStreet = '';
+//      let barCity = '';
+//      let barState = '';
+//      let barPostCode = '';
+      
       result.forEach(function(brewery){
-        document.querySelector('#br_name').innerHTML = 'Name: ' + brewery.name;
-        document.querySelector('#website').innerHTML = 'Website: ' + brewery.website_url;
-        document.querySelector('#street').innerHTML = 'Street: ' + brewery.street;
-        document.querySelector('#in_city').innerHTML = 'City: ' + brewery.city;
-        document.querySelector('#state').innerHTML = 'State: ' + brewery.state;
-        document.querySelector('#postCode').innerHTML = 'Postal code: ' + brewery.postal_code;
+//          bar_obj.name = brewery.name;
+//          bar_obj.website = brewery.website_url;
+          if(brewery.name, brewery.website_url, brewery.street, brewery.city, brewery.state){
+//              barName += brewery.name + ' \n' + brewery.website_url;
+//              ;
+              
+              barName.push(brewery.name);
+              barName.push(brewery.website_url);
+              barName.push(brewery.street);
+              barName.push(brewery.city);
+              barName.push(brewery.state);
+//              barWebsite += brewery.website_url;
+//              barStreet += brewery.street;
+//              barCity += brewery.city;
+//              barState += brewery.state;
+          }
+          
+          
+//        document.querySelector('#br_name').innerHTML = 'Name: ' + brewery.name;
+//        document.querySelector('#website').innerHTML = 'Website: ' + brewery.website_url;
+//        document.querySelector('#street').innerHTML = 'Street: ' + brewery.street;
+//        document.querySelector('#in_city').innerHTML = 'City: ' + brewery.city;
+//        document.querySelector('#state').innerHTML = 'State: ' + brewery.state;
+//        document.querySelector('#postCode').innerHTML = 'Postal code: ' + brewery.postal_code;
       });
+      
+//        for(let i = 0; i < barName.length; i++){
+//            document.querySelector('#br_name').innerHTML = barName[i];
+//        }
+     document.querySelector('#br_name').innerHTML = barName;   
+
+      //document.querySelector('#website').innerHTML = barWebsite;    
 
     }
   }
