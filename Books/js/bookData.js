@@ -11,7 +11,7 @@ function findBook(){
 	//get book from input
     let book = getBook();
     //send request to url
-    let urlLink = createURL(book);
+    let urlLink = createURL();
     sendRequest(urlLink);
 }
 
@@ -22,22 +22,27 @@ function getBook(){
 }
 
 //function to create url link
-function createURL(book){
+function createURL(){
     return 'https://www.googleapis.com/books/v1/volumes?q=${book}';
 }
 
-//function to show result, list of book items
-function showBooks(items){
-    let books = items;
-    console.log(books);
+
+//create books object and assign value to this object from 
+//function 'returnBooks' which returns list of book items
+let books = function returnBooks(items){
+    console.log(items);
+    return items;
 }
+
 
 //function to send request and get response 
 function sendRequest(urlLink){
      $.ajax({
          type:'GET',
          url:urlLink, 
-         success: showBooks,
+         success: books,
          error: function(){console.log('failed');}
      });
  }
+
+
