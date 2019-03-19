@@ -1,4 +1,8 @@
 //constructor for the library
+//let books = [];
+//console.log(books);
+//console.log(returnBooks());
+
 function Library(books){
     
   this.books = books;
@@ -18,3 +22,8 @@ function Library(books){
   }
   
 }
+
+let myLib = new Library(books);
+console.log(myLib);
+
+

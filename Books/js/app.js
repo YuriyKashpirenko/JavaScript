@@ -12,7 +12,6 @@ books.forEach(function(item){
 });
 
 let lib = new Library(googleBooks);
-//let myLib = new Library(Books);
 
 //library
 console.log('Print titles: ');
@@ -20,3 +19,6 @@ lib.printTitles();
 
 console.log('Print description: ');
 lib.printDescription();
+
+//console.log(books[0].volumeInfo.imageLinks.smallThumbnail);
+//console.log(books[1].saleInfo);
