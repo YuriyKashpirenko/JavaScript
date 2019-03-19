@@ -7,3 +7,4 @@ function Book(title, description, smallThumbnail, amount, authors){
   this.authors = authors;
 
 }
+

@@ -1,10 +1,5 @@
 //constructor for the library
-
-//taking books from bookData 
-console.log(Array.from(books));
-
-
-function Library (books){
+function Library(books){
     
   this.books = books;
     

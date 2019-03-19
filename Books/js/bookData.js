@@ -27,20 +27,23 @@ function createURL(){
 }
 
 
-//create books object and assign value to this object from 
+//create books array and assign value to this array from 
 //function 'returnBooks' which returns list of book items
-let books = function returnBooks(items){
-    console.log(items);
-    return items;
+let books = [];
+function returnBooks(items){
+    //books = Object.values(items);
+    books = items;
+    console.log(books);
 }
 
+console.log(books);
 
 //function to send request and get response 
 function sendRequest(urlLink){
      $.ajax({
          type:'GET',
          url:urlLink, 
-         success: books,
+         success: returnBooks,
          error: function(){console.log('failed');}
      });
  }
