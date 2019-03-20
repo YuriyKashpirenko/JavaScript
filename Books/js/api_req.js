@@ -35,25 +35,19 @@ function returnBooks(items){
     //books = items;
     let booksTemp = Object.values(items);
     books = booksTemp.slice();
-    console.log(books);
-
-    //books = booksTemp.slice();
-    //console.log(items);
     //console.log(books);
-    //return items;
-    //return books;
-    
+
 }
 
-console.log(books);
+//console.log(books);
 
 //function to send request and get response 
 function sendRequest(urlLink){
      $.ajax({
          type:'GET',
          url:urlLink, 
-         success: returnBooks,
-         //success: books,
+         //success: function(){console.log(returnBooks)},
+         success: function(){console.log(books);},
          error: function(){console.log('failed');}
      });
  }
