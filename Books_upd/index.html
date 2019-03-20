@@ -2,8 +2,17 @@
   <head>
   </head>
   <body>
-    Search: <input id = "bookName"></input> 
+    Search: <input id = "bookName" style="background-color: #FFFF00"></input> 
     <button>Submit</button>
+    
+    <br><br>
+    Sort by price: <button onclick = "pr_asc()">asc</button> 
+                   <button onclick = "pr_desc()">desc</button>
+    <br><br>              
+    Sort by title: 
+    <button onclick = "titleAlphabet()">alphabetically</button>
+    
+    <br><br>
     <div id = "g_books"></div>
 
   </body>

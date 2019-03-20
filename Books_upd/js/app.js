@@ -35,6 +35,7 @@ myBooks.forEach(function(book){
 });
 
 //print each book on webpage
+function printBooks(){
 let result = '';
 myBooks.forEach(function(book){
     //create an article with book title, description, 
@@ -58,14 +59,43 @@ myBooks.forEach(function(book){
     </br>`        
     });
 document.querySelector('#g_books').innerHTML = result;
+}
+
+printBooks();
+
+
+//sort books by price in ascending order
+function pr_asc(){
+    console.log('Sort by Price Asc');
+    myLibrary.sortByPriceAsc();
+}
+
+//sort books by price in descending order
+function pr_desc(){
+    console.log('Sort by Price Desc: ');
+    myLibrary.sortByPriceDesc();
+}
+
+//sort books  based on the title alphabetically
+function titleAlphabet(){
+    console.log('Sort Books by Title Alphabetically: ');
+    myLibrary.sortTitleAlphabet();
+}
 
 
 //library
 console.log('Print Titles: ');
 myLibrary.printTitles();
 
-console.log('Print Authors: ');
-myLibrary.printAuthors();
+//console.log('Print Authors: ');
+//myLibrary.printAuthors();
+
+console.log('Original Print Amounts: ');
+myLibrary.printAmount();
+
+
+
+
 
 
 
