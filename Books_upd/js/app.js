@@ -37,7 +37,8 @@ myBooks.forEach(function(book){
 //print each book on webpage
 let result = '';
 myBooks.forEach(function(book){
-    //create an article with book title, image, price, authors, and preview link
+    //create an article with book title, description, 
+    //image, price, authors, and preview link
     result += 
     `<article>
         <h4>Title: ${book.title}</h4>
@@ -49,7 +50,8 @@ myBooks.forEach(function(book){
         <p>Price: ${book.amount}</p>
         <p>Authors: ${book.authors}</p>
 
-        <p>Preview Link: 
+        <p>
+            Preview Link: 
             <a href="${book.previewLink}" target="_blank">${book.smallThumbnail}</a>
         </p>
     </article>
