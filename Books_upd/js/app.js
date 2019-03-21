@@ -6,7 +6,7 @@ let myBooks = [];
 books.forEach(function(item) {
   //if price is undefined, then define price at 0
   if(item.saleInfo.listPrice == undefined){
-        item.saleInfo["listPrice"] = {amount: undefined};
+        item.saleInfo["listPrice"] = {amount: null};
   }
     
   //check if price is exist, if yes then create new book

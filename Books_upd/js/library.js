@@ -25,12 +25,18 @@ function Library (books){
           console.log(book.amount);
       });
   }
-  
+      
+  console.log(this.books[0].amount);
   //method will sort books price in ascending order
   this.sortByPriceAsc = function(){
-      this.books.sort(function(a,b){
+//      if(this.books.amount != null){
+          this.books.sort(function(a,b){
           return a.amount-b.amount;
       });
+      //}
+
+      //if amount is null then push object to the end
+      if(this.books.amount == null){this.books.push();}
       //print books on webpage (method in app.js)
       printBooks();
       //print books price in dev. console
