@@ -26,6 +26,7 @@ books.forEach(function(item) {
 
 let myLibrary = new Library(myBooks);
 
+
 //preview in dev tools console: for each book 
 myBooks.forEach(function(book){
     if(book.authors){
@@ -42,8 +43,10 @@ myBooks.forEach(function(book){
 
 //print each book on webpage
 function printBooks(){
-let result = '';
-myBooks.forEach(function(book){
+    let result = '';
+    myBooks.forEach(function(book){
+
+    
     //create an article with book title, description, 
     //image, price, authors, and preview link
     result += 
@@ -64,11 +67,16 @@ myBooks.forEach(function(book){
     </article>
     </br>`        
     });
-document.querySelector('#g_books').innerHTML = result;
+ 
+    document.querySelector('#g_books').innerHTML = result;
 }
 
 printBooks();
 
+//highlight words
+var context = document.querySelector(".context");
+var instance = new Mark(context);
+instance.mark("Harry Potter");
 
 //sort books by price in ascending order
 function pr_asc(){
@@ -96,7 +104,7 @@ myLibrary.printTitles();
 //console.log('Print Authors: ');
 //myLibrary.printAuthors();
 
-console.log('Original Print Amounts: ');
+console.log('Print Not Sorted Price(Amount): ');
 myLibrary.printAmount();
 
 
