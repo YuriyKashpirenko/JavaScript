@@ -53,7 +53,7 @@ myBooks.forEach(function(book){
 
         <p>
             Preview Link: 
-            <a href="${book.previewLink}" target="_blank">${book.smallThumbnail}</a>
+            <a href="${book.previewLink}" target="_blank">${book.previewLink}</a>
         </p>
     </article>
     </br>`        
