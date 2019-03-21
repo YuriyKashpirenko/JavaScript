@@ -2,7 +2,13 @@
 
 // books is defined in bookData.js
 let myBooks = [];
+
 books.forEach(function(item) {
+  //if price is undefined, then define price at 0
+  if(item.saleInfo.listPrice == undefined){
+        item.saleInfo["listPrice"] = {amount: undefined};
+  }
+    
   //check if price is exist, if yes then create new book
   if (item.saleInfo.listPrice){
           // Book constructor is in book.js
@@ -14,7 +20,7 @@ books.forEach(function(item) {
                               item.volumeInfo.previewLink
                              );
           myBooks.push(temp);
-  }
+  } 
 
 });
 
