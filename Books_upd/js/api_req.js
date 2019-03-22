@@ -1,9 +1,9 @@
 'use strict'
 
-//when document(site) is ready/downloaded 
+//when document(site) is ready/downloaded
 //if there was a click on button, then execute findBook function
 $(document).ready(function(){
-  $("button").click(findBook);
+  $('#srButton').click(findBook);
 });
 
 //function to find books
@@ -27,29 +27,41 @@ function createURL(book){
 }
 
 
-//create books array and assign value to this array from 
-//function 'returnBooks' which returns list of book items
-let books = [];
-//let books = function returnBooks(items){
-function returnBooks(items){
-    //books = items;
-    let booksTemp = Object.values(items);
-    books = booksTemp.slice();
-    //console.log(books);
+// the logic to transform data and to create object
+function returnBooks(res){
+    myLibrary.books = [];
+    res.items.forEach(function(item) {
+      //if price is undefined, then define price at 0
+      if(item.saleInfo.listPrice == undefined){
+            item.saleInfo["listPrice"] = {amount: null};
+      }
 
+      //check if price is exist, if yes then create new book
+      if (item.saleInfo.listPrice){
+              // Book constructor is in book.js
+              let temp = new Book(item.volumeInfo.title,
+                                  item.volumeInfo.description,
+                                  item.volumeInfo.imageLinks.smallThumbnail,
+                                  item.saleInfo.listPrice.amount,
+                                  item.volumeInfo.authors,
+                                  item.volumeInfo.previewLink
+                                 );
+              myLibrary.books.push(temp);
+      }
+
+    });
+    //print each book on webpage
+    myLibrary.printBooks();
+    highlightWords();
 }
 
-//console.log(books);
 
-//function to send request and get response 
+//function to send request and get response
 function sendRequest(urlLink){
      $.ajax({
          type:'GET',
-         url:urlLink, 
-         //success: function(){console.log(returnBooks)},
-         success: function(){console.log(books);},
+         url:urlLink,
+         success: returnBooks,
          error: function(){console.log('failed');}
      });
  }
-
-
