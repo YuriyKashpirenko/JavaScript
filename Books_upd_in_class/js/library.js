@@ -22,7 +22,7 @@ function Library (books){
           this.books.sort(function(a,b){
           return a.amount-b.amount;
       });
-      //print books on webpage
+      //print books on webpage (method in app.js)
       this.printBooks();
       //print books price in dev. console
       this.printAmount();
@@ -33,7 +33,7 @@ function Library (books){
       this.books.sort(function(a,b){
           return b.amount-a.amount;
       });
-      //print books on webpage
+      //print books on webpage (method in app.js)
       this.printBooks();
       //print books prices in dev. console
       this.printAmount();
@@ -50,17 +50,16 @@ function Library (books){
           //return default value with
           return 0;
       });
-      //print books on webpage
+      //print books on webpage (method in app.js)
       this.printBooks();
       //print books titels in dev. console
       this.printTitles();
   }
 
 
-  //method to print books in webpage
+  //print books in webpage
   this.printBooks = function(){
-    //check the book length in dev. console  
-    console.log('books length: ' + this.books.length);
+    console.log('books length: ' + this.books.length);//check the book length in console
 
       let result = '';
       this.books.forEach(function(book){

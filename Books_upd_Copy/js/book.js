@@ -1,8 +1,8 @@
 // constructor for the book
-function Book(title,
+function Book(title, 
               description,
               smallThumbnail,
-              amount,
+              amount, 
               authors,
               previewLink
               ){
@@ -12,12 +12,4 @@ function Book(title,
   this.amount = amount;
   this.authors = authors;
   this.previewLink = previewLink;
-}
-
-//function to highlight words
-function highlightWords(){
-  let book_name = $('#bookName').val();
-  var context = document.querySelector(".context");
-  var instance = new Mark(context);
-  instance.mark(book_name);
 }

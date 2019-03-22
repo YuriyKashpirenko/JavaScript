@@ -1,4 +1,3 @@
-//declare and initialyze my Lybrary
 let myLibrary = new Library([]);
 
 

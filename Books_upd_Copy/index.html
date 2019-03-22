@@ -1,44 +1,41 @@
 <html>
-
+ 
   <head>
       <meta charset = "UTF-8">
       <title>Find Books</title>
-      <!--//CSS STYLING//-->
       <link rel="stylesheet" href="css/style.css">
   </head>
-
+  
   <body>
     <!--//SEARCH BAR//-->
-    Search: <input id = "bookName" style="background-color: #FFFF00"></input>
-    <button id = "srButton">Submit</button>
-
+    Search: <input id = "bookName" style="background-color: #FFFF00"></input> 
+    <button>Submit</button>
+    
     <!--//SORT BY PRICE ASC AND DESC//-->
     <br><br>
-    Sort by Price: <button onclick = "pr_asc()">asc</button>
+    Sort by Price: <button onclick = "pr_asc()">asc</button> 
                    <button onclick = "pr_desc()">desc</button>
-
+    
     <!--//SORT BY TITLE ALPHABETICALLY//-->
-    <br><br>
-    Sort by Title:
+    <br><br>              
+    Sort by Title: 
     <button onclick = "titleAlphabet()">alphabetically</button>
-
+    
     <!--//PRINT BOOKS//-->
     <br><br>
-    <div class="context"><!--//define context class for words highlighting//-->
-        <div id = "g_books"></div><!--//define g_books id for printing result from js//-->
+    <div class="context">
+        <div id = "g_books"></div>
     </div>
-
+    
 
   </body>
-
+  
   <!--//JS SOURCE//-->
-  <!--//JS library: jquery.com///--> 
   <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-  <!--//library for text highlight: markjs.io//-->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js' charset="UTF-8"></script>
-  <script src="./js/api_req.js"></script>
+  <script src="./js/bookData.js"></script>
   <script src="./js/book.js"></script>
   <script src="./js/library.js"></script>
   <script src="./js/app.js"></script>
-
+  
 </html>

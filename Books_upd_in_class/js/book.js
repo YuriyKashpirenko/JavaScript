@@ -14,7 +14,7 @@ function Book(title,
   this.previewLink = previewLink;
 }
 
-//function to highlight words
+//highlight words, function defined in book.js
 function highlightWords(){
   let book_name = $('#bookName').val();
   var context = document.querySelector(".context");

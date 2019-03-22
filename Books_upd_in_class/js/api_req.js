@@ -27,9 +27,8 @@ function createURL(book){
 }
 
 
-//logic to transform data from response(res) and create an array of objects
+// the logic to transform data and to create object
 function returnBooks(res){
-    //empty library books array
     myLibrary.books = [];
     res.items.forEach(function(item) {
       //if price is undefined, then define price at 0
@@ -47,7 +46,6 @@ function returnBooks(res){
                                   item.volumeInfo.authors,
                                   item.volumeInfo.previewLink
                                  );
-              //add books to library books
               myLibrary.books.push(temp);
       }
 
