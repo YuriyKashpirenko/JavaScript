@@ -54,3 +54,37 @@ mark{
     background: orange;
     color: black;
 }
+
+/*=== ERROR ===*/
+#error{ font-weight: bold;}
+
+
+/* === MOBILE ===*/
+@media all and (min-width: 0px) and (max-width: 599px){
+    input {
+        width: 98%;
+    }
+    
+    #srButton {
+        width: 98%;
+    }
+    
+    button, select {
+        padding: 6px 10px;
+        margin: 2px 0;   
+    }
+    
+    #asc,#desc{
+        width: 48%;
+    }
+    
+    #alph{
+        width: 98%;
+    }
+    
+    button {
+        padding: 6px 10px;
+        margin: 2px 0; 
+    }
+    
+}

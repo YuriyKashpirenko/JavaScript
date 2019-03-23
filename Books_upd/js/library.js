@@ -68,7 +68,7 @@ function Library (books){
       //image, price, authors, and preview link
       result +=
       `<article>
-          <h4>Title: ${book.title}</h4>
+          <h4>${book.title}</h4>
           <p>
               <img src="${book.smallThumbnail}" align="left">
               ${book.description}

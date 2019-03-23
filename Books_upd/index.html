@@ -10,16 +10,16 @@
   <body>
        <nav>
             <!--//SEARCH BAR//-->
-            <input id = "bookName" placeholder="Book Name.."></input>
+            <input id = "bookName" onclick="clearInput();" placeholder="Author or Book Name.."></input>
             <button id = "srButton">Submit</button>
 
             <!--//SORT BY PRICE ASC AND DESC//-->
             <br>
-            <button onclick = "pr_asc()">Price Asc</button>
-            <button onclick = "pr_desc()">Price Desc</button>
+            <button id = "asc" onclick = "pr_asc()">Price Asc</button>
+            <button id = "desc" onclick = "pr_desc()">Price Dsc</button>
 
             <!--//SORT BY TITLE ALPHABETICALLY//-->
-            <button onclick = "titleAlphabet()">Alphabetically</button>
+            <button id = "alph" onclick = "titleAlphabet()">Alphabetically</button>
        </nav>
 
 
@@ -27,6 +27,7 @@
     <br><br>
     <div class="context"><!--//define context class for words highlighting//-->
         <div id = "g_books"></div><!--//define g_books id for printing result from js//-->
+        <div id = 'error'></div>
     </div>
 
 

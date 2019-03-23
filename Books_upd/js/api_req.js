@@ -10,9 +10,16 @@ $(document).ready(function(){
 function findBook(){
 	//get book from input
     let book = getBook();
-    //send request to url
-    let urlLink = createURL(book);
-    sendRequest(urlLink);
+    
+    //check if input is empty
+    if (emptyInput(book) == true){
+        console.log(document.querySelector('#error').innerHTML = 'Please enter an author or book name');
+    }
+    else{
+        //send request to url
+        let urlLink = createURL(book);
+        sendRequest(urlLink);
+    }
 }
 
 //function get book name from search input
@@ -26,6 +33,15 @@ function createURL(book){
     return `https://www.googleapis.com/books/v1/volumes?q=${book}`;
 }
 
+//check if input is empty
+function emptyInput(value){
+    if (value.length == 0){return true;}
+}
+
+//clear the error on new input
+function clearInput(){
+    document.querySelector('#error').innerHTML = '';
+}
 
 //logic to transform data from response(res) and create an array of objects
 function returnBooks(res){
@@ -35,6 +51,11 @@ function returnBooks(res){
       //if price is undefined, then define price at 0
       if(item.saleInfo.listPrice == undefined){
             item.saleInfo["listPrice"] = {amount: null};
+      }
+        
+      //if smallThumbnail is undefined
+      if(item.volumeInfo.imageLinks === undefined){
+            item.volumeInfo["imageLinks"] = {smallThumbnail: null};
       }
 
       //check if price is exist, if yes then create new book
