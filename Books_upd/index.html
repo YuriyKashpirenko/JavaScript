@@ -8,19 +8,20 @@
   </head>
 
   <body>
-    <!--//SEARCH BAR//-->
-    Search: <input id = "bookName" style="background-color: #FFFF00"></input>
-    <button id = "srButton">Submit</button>
+       <nav>
+            <!--//SEARCH BAR//-->
+            <input id = "bookName" placeholder="Book Name.."></input>
+            <button id = "srButton">Submit</button>
 
-    <!--//SORT BY PRICE ASC AND DESC//-->
-    <br><br>
-    Sort by Price: <button onclick = "pr_asc()">asc</button>
-                   <button onclick = "pr_desc()">desc</button>
+            <!--//SORT BY PRICE ASC AND DESC//-->
+            <br>
+            <button onclick = "pr_asc()">Price Asc</button>
+            <button onclick = "pr_desc()">Price Desc</button>
 
-    <!--//SORT BY TITLE ALPHABETICALLY//-->
-    <br><br>
-    Sort by Title:
-    <button onclick = "titleAlphabet()">alphabetically</button>
+            <!--//SORT BY TITLE ALPHABETICALLY//-->
+            <button onclick = "titleAlphabet()">Alphabetically</button>
+       </nav>
+
 
     <!--//PRINT BOOKS//-->
     <br><br>
@@ -32,9 +33,9 @@
   </body>
 
   <!--//JS SOURCE//-->
-  <!--//JS library: jquery.com///--> 
+  <!-- jQuery Library from jquery.com -->
   <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-  <!--//library for text highlight: markjs.io//-->
+  <!-- Library for text highlight from markjs.io -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js' charset="UTF-8"></script>
   <script src="./js/api_req.js"></script>
   <script src="./js/book.js"></script>

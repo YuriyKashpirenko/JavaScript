@@ -80,7 +80,7 @@ function Library (books){
           <p>
               Preview Link:
               <a href="${book.previewLink}" target="_blank">${book.previewLink}</a>
-          </p>
+          </p><br>
       </article>
       </br>`
       });
