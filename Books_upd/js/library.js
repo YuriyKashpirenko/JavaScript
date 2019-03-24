@@ -69,8 +69,8 @@ function Library (books){
       result +=
       `<article>
           <h4>${book.title}</h4>
-          <p>
-              <img src="${book.smallThumbnail}" align="left">
+          <p id = "description">
+              <img src="${book.smallThumbnail}">
               ${book.description}
           </p>
 
@@ -78,8 +78,8 @@ function Library (books){
           <p>Authors: ${book.authors}</p>
 
           <p>
-              Preview Link:
-              <a href="${book.previewLink}" target="_blank">${book.previewLink}</a>
+              Link:
+              <a href="${book.previewLink}" target="_blank" id="link">Preview in Google Books</a>
           </p><br>
       </article>
       </br>`

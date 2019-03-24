@@ -2,7 +2,9 @@
 nav{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 60%;
+    align-content: center;
+    text-align: center;
 }
 
 input{
@@ -46,7 +48,22 @@ button:hover {
 .context{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 50%;
+}
+
+img {
+    float: left;
+    width: auto;
+    max-height: auto;
+    margin: 1px 10px 2px 0px;
+}
+
+#description {text-align: justify;}
+
+#link{
+    display: inline-block;
+    text-decoration: none;
+    text-align: left;
 }
 
 /*=== TEXT HIGHLIGHT ===*/
@@ -61,6 +78,7 @@ mark{
 
 /* === MOBILE ===*/
 @media all and (min-width: 0px) and (max-width: 599px){
+    /*=== NAVIGATION ===*/
     input {
         width: 98%;
     }
@@ -85,6 +103,14 @@ mark{
     button {
         padding: 6px 10px;
         margin: 2px 0; 
+    }
+    
+    /*=== BODY ===*/
+    img {
+    float: left;
+    max-width: 40%;
+    height: auto;
+    margin: 1px 10px 2px 0px;
     }
     
 }
