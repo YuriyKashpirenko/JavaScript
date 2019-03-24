@@ -79,12 +79,20 @@ mark{
 /* === MOBILE ===*/
 @media all and (min-width: 0px) and (max-width: 599px){
     /*=== NAVIGATION ===*/
+    nav{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    }
+    
     input {
-        width: 98%;
+        width: 100%;
     }
     
     #srButton {
-        width: 98%;
+        width: 100%;
     }
     
     button, select {
@@ -93,11 +101,11 @@ mark{
     }
     
     #asc,#desc{
-        width: 48%;
+        width: 40%;
     }
     
     #alph{
-        width: 98%;
+        width: 100%;
     }
     
     button {
@@ -106,6 +114,12 @@ mark{
     }
     
     /*=== BODY ===*/
+    .context{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    }
+    
     img {
     float: left;
     max-width: 40%;
