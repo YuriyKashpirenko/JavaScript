@@ -79,7 +79,7 @@ function Library (books){
 
           <p>
               Link:
-              <a href="${book.previewLink}" target="_blank" id="link">Preview in Google Books</a>
+              <a href="${book.previewLink}" target="_blank" id="link">${book.previewLink}</a>
           </p><br>
       </article>
       </br>`
