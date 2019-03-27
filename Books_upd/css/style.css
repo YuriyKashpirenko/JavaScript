@@ -73,7 +73,10 @@ mark{
 }
 
 /*=== ERROR ===*/
-#error{ font-weight: bold;}
+#error{ 
+    font-weight: bold;
+    color: darkblue;
+}
 
 
 /* === MOBILE ===*/
@@ -96,7 +99,7 @@ mark{
     }
     
     button, select {
-        padding: 6px 10px;
+        padding: 8px 10px;
         margin: 2px 0;   
     }
     
@@ -109,7 +112,7 @@ mark{
     }
     
     button {
-        padding: 6px 10px;
+        padding: 8px 10px;
         margin: 2px 0; 
     }
     
